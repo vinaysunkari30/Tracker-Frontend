@@ -1,0 +1,135 @@
+.tasks-page{
+    min-height: 550px;
+    background-color: rgb(0, 0, 0);
+    padding-left: 10px;
+}
+
+.tasks-heading{
+    color: white;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-thickness: 2px;
+    letter-spacing: .2px;
+}
+.colon{
+    color: white;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 6px;
+    margin-left: 2px;
+}
+.project-name{
+    color: rgb(0, 213, 255);
+    font-family: 'Roboto Slab';
+    font-size: 28px;
+    margin-left: 10px;
+    margin-top: 3px;
+    font-weight: bold;
+}
+.project-task-heading{
+    color: rgb(34, 223, 194);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    letter-spacing: .1px;
+    text-shadow: 0px 0px 10px 5px white;
+    text-decoration: underline;
+    text-decoration-color: white;
+	text-decoration-thickness: 2px;
+    margin-bottom: 20px;
+}
+
+.create-task-btn{
+    border: 0px;
+    background-color: rgb(236, 245, 254);
+    border-radius: 20px;
+    width: 140px;
+    padding: 6px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Courgette';
+    color: rgb(0, 208, 255);
+    box-shadow: 0px 0px 10px 5px rgb(0, 208, 255);
+    transition: all .2s ease-in-out;
+}
+.create-task-btn:active{
+    transform: scale(0.8);
+}
+
+.textarea-modal-input-field{
+    padding-left: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    color:rgb(0, 208, 255);
+    outline: none;
+    font-family: "Roboto";
+    border: 1.5px solid rgb(29, 113, 147);
+    border-radius: 10px;
+    width: 88%;
+    margin-top: 0px;
+}
+
+.empty-tasks-page{
+    color: white;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 25px;
+    height: 100vh;
+    padding-top: 0px;
+}
+
+.empty-tasks-heading{
+    color: rgb(34, 223, 194);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 26px;
+    font-weight: 550;
+    letter-spacing: .1px;
+    text-shadow: 0px 0px 10px 5px white;
+    letter-spacing: .5px;
+    margin-bottom: 15px;
+}
+
+.filled-projects-page{
+    padding-top: 90px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+    .create-task-btn{
+        margin-right: 30px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .create-task-btn{
+        margin-right: 50px;
+    }
+    .empty-tasks-heading{
+        font-size: 28px;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    .create-task-btn{
+        margin-right: 70px;
+    }
+    .empty-tasks-heading{
+        font-size: 31px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .create-task-btn{
+        margin-right: 100px;
+    }
+    .empty-tasks-heading{
+        font-size: 32px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .project-task-heading{
+        font-size: 30px;
+    }
+}

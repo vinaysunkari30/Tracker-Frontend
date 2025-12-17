@@ -1,0 +1,161 @@
+.projects-page{
+    min-height: 550px;
+    background-color: rgb(216, 232, 248);
+    padding-left: 15px;
+    padding-right: 15px; 
+}
+.projects-heading{
+    font-size: 35px;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(29, 113, 147);
+    text-decoration: underline;
+    text-decoration-color: rgb(29, 113, 147);
+    text-decoration-thickness: 2px;
+}
+.new-project-btn{
+    border: 2px solid rgb(29, 113, 147);
+    border-radius: 20px;
+    height: 60px;
+    margin-left: 0px;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px 3px rgb(29, 127, 147);
+    transition: all 0.2s ease;
+}
+.icon{
+    color: rgb(0, 208, 255);
+    font-size: 25px;
+    margin-right: 3px;
+}
+.btn-text{
+    color:rgb(0, 208, 255);
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Courgette";
+    margin-top: 8px;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1.8px;
+    margin-right: 5px
+}
+.new-project-btn:active{
+    transform: scale(0.8);
+    box-shadow: 0px 0px 20px 10px rgb(29, 113, 147);
+}
+.err-msg{
+    font-size: 30px;
+    font-family: "Roboto";
+    font-weight: 500;
+    color:rgb(0, 208, 255);
+    text-align: center;
+}
+
+.modal-title{
+    margin-left: 138px;
+    margin-top: 0px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color:rgb(29, 113, 147);
+    text-decoration: underline;
+    text-decoration-color: rgb(29, 113, 147);
+    text-decoration-thickness: 2px;
+}
+.close-btn{
+    color: rgb(29, 113, 147);
+    border: 0px;
+    background-color: transparent;
+    font-size: 30px;
+}
+
+.modal-label{
+    color:rgb(29, 113, 147);
+    font-family:"Roboto";
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.modal-input-field{
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color:rgb(29, 113, 147);
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    width: 88%;
+    margin-top: 10px;
+    padding-left: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    color:rgb(0, 208, 255);
+    outline: none;
+    font-family: "Roboto";
+}
+.create-btn{
+    border: 0px;
+    background-color: rgb(29, 113, 147);
+    border-radius: 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px;
+    width: 85px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+.create-btn:active{
+    transform: scale(0.8);
+    box-shadow: 0px 0px 8px 3px rgb(29, 113, 147);
+}
+
+.spinners-page{
+    padding-top: 30px;
+    background-color: rgb(216, 232, 248);
+    height: 100vh;
+}
+
+.no-projects-div{
+    padding-top: 0px;
+    height: 100vh;
+}
+
+.filled-projects-page{
+    padding-top: 90px;
+    text-align: center;
+}
+
+.empty-projects-heading{
+    font-size: 30px;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(29, 113, 147);
+}
+
+@media screen and (min-width: 768px){
+    .no-projects-div{
+        width: 80%;
+    }
+    .projects-heading{
+        font-size: 42px;
+    }
+    .empty-projects-heading{
+        font-size: 33px;
+        font-weight: bold;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: rgb(29, 113, 147);
+    }
+    .new-project-btn{
+        height: 65px;
+        width: 240px;
+    }
+}
+@media screen and (min-width: 992px){
+    .projects-heading{
+        font-size: 45px;
+    }
+}
+@media screen and (max-width: 768px){
+    .new-project-btn{
+        width: 220px;
+        margin-left: 6px;
+    }
+}
