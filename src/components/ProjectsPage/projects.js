@@ -40,7 +40,7 @@ class ProjectsPage extends Component {
       },
     };
     const response = await fetch(
-      "http://localhost:5000/projects",
+      "https://tracker-backend-vg3b.onrender.com/projects",
       options
     );
     const jsonData = await response.json();
@@ -91,7 +91,7 @@ class ProjectsPage extends Component {
     };
 
     const response = await fetch(
-      "http://localhost:5000/projects",
+      "https://tracker-backend-vg3b.onrender.com/projects",
       options
     );
     const jsonData = await response.json();
@@ -120,9 +120,8 @@ class ProjectsPage extends Component {
         Authorization: `Bearer ${jwtToken}`,
       },
     };
-    // https://tracker-backend-vg3b.onrender.com
     const response = await fetch(
-      `http://localhost:5000/projects/${id}`,
+      `https://tracker-backend-vg3b.onrender.com/projects/${id}`,
       options
     );
     const jsonData = await response.json();

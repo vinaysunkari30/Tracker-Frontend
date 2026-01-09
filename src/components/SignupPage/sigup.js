@@ -139,9 +139,8 @@ class SignupPage extends Component {
       },
       body: JSON.stringify(userDetails),
     };
-    // https://tracker-backend-vg3b.onrender.com
     const response = await fetch(
-      "http://localhost:5000/signup",
+      "https://tracker-backend-vg3b.onrender.com/signup",
       options
     );
     const jsonData = await response.json();

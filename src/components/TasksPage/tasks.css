@@ -4,9 +4,6 @@
     padding-left: 10px;
 }
 
-/* .project-name-div{
-    border: 1px solid white;
-} */
 .project-name{
     color: rgb(0, 208, 255);
     font-family: 'Roboto Slab';
@@ -114,5 +111,8 @@
 @media screen and (min-width: 768px){
     .project-task-heading{
         font-size: 30px;
+    }
+    .project-name{
+        font-size: 32px;
     }
 }

@@ -39,9 +39,8 @@ class TaskPage extends Component {
         Authorization: `Bearer ${jwtToken}`,
       },
     };
-    // https://tracker-backend-vg3b.onrender.com
     const response = await fetch(
-      `http://localhost:5000/projects/${projectId}/tasks/${taskId}`,
+      `https://tracker-backend-vg3b.onrender.com/projects/${projectId}/tasks/${taskId}`,
       options
     );
     const jsonData = await response.json();
@@ -95,7 +94,7 @@ class TaskPage extends Component {
       },
     };
     const response = await fetch(
-      `http://localhost:5000/projects/${projectId}/tasks/${taskId}`,
+      `https://tracker-backend-vg3b.onrender.com/projects/${projectId}/tasks/${taskId}`,
       options
     );
     const jsonData = await response.json();
@@ -148,7 +147,7 @@ class TaskPage extends Component {
       body: JSON.stringify(newStatusObject),
     };
     const response = await fetch(
-      `http://localhost:5000/projects/${projectId}/tasks/${taskId}`,
+      `https://tracker-backend-vg3b.onrender.com/projects/${projectId}/tasks/${taskId}`,
       options
     );
     const jsonData = response.json();

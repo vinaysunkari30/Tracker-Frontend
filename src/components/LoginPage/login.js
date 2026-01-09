@@ -88,8 +88,7 @@ class LoginPage extends Component {
       },
       body: JSON.stringify(userDetails),
     };
-    //"https://tracker-backend-vg3b.onrender.com/login",
-    const response = await fetch("http://localhost:5000/login", options);
+    const response = await fetch("https://tracker-backend-vg3b.onrender.com/login", options);
     const jsonData = await response.json();
     const loginjwtToken = jsonData.jwtToken;
     if (response.ok) {

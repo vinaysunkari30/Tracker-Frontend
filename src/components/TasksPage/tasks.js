@@ -44,7 +44,7 @@ class TasksPage extends Component {
       },
     };
     const response = await fetch(
-      `http://localhost:5000/projects/${id}`,
+      `https://tracker-backend-vg3b.onrender.com/projects/${id}`,
       options
     );
     const jsonData = await response.json();
@@ -133,8 +133,7 @@ class TasksPage extends Component {
       },
       body: JSON.stringify(taskDetails),
     };
-    // https://tracker-backend-vg3b.onrender.com
-    const response = await fetch(`http://localhost:5000/projects/${id}/tasks`,options);
+    const response = await fetch(`https://tracker-backend-vg3b.onrender.com/projects/${id}/tasks`,options);
     const jsonData = await response.json();
     if (response.ok) {
       await this.getTasksList();
@@ -203,7 +202,7 @@ class TasksPage extends Component {
               ) : (
                 <div className="filled-projects-page">
                   <div className="d-flex justify-content-center align-items-center project-name-div w-100 ps-md-5">
-                    <h1 className="project-name">{projectName}</h1>
+                    <h1 className="project-name mt-2">{projectName}</h1>
                   </div>
                   <div className="d-flex justify-content-end mt-3">
                     <button
