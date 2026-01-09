@@ -22,6 +22,7 @@ class LoginPage extends Component {
     if (email === "") {
       this.setState({
         isEmailEmpty: true,
+        isErrTrue: false,
       });
     }
   };
@@ -30,6 +31,7 @@ class LoginPage extends Component {
     if (password === "") {
       this.setState({
         isPasswordEmpty: true,
+        isErrTrue: false,
       });
     }
   };
@@ -86,10 +88,8 @@ class LoginPage extends Component {
       },
       body: JSON.stringify(userDetails),
     };
-    const response = await fetch(
-      "https://tracker-backend-vg3b.onrender.com/login",
-      options
-    );
+    //"https://tracker-backend-vg3b.onrender.com/login",
+    const response = await fetch("http://localhost:5000/login", options);
     const jsonData = await response.json();
     const loginjwtToken = jsonData.jwtToken;
     if (response.ok) {
@@ -100,6 +100,7 @@ class LoginPage extends Component {
     } else {
       this.setState({
         isErrTrue: true,
+        isLoading: false,
         errorMsg: jsonData.error,
       });
     }
@@ -135,7 +136,7 @@ class LoginPage extends Component {
             <div className="col-md-5 d-flex align-items-center justify-content-center p-0">
               <form
                 onSubmit={this.onLogin}
-                className="sign-in-form col-sm-7 col-md-12 col-lg-10 col-xl-9 d-flex flex-column align-items-center pt-4"
+                className="login-in-form col-sm-7 col-md-12 col-lg-10 col-xl-9 d-flex flex-column align-items-center pt-4"
               >
                 <h1 className="sign-in-heading text-center mb-3">Login In</h1>
                 <FaUserCircle className="user-icon align-self-center" />
@@ -178,25 +179,24 @@ class LoginPage extends Component {
                 ) : (
                   ""
                 )}
-                {isErrTrue ? (
+                {isErrTrue && (
                   <p className="error-msg fs-5 text-center mb-2">{errorMsg}</p>
-                ) : (
-                  <button type="submit" className="button align-self-center">
-                    {isLoading ? (
-                      <div className="d-flex justify-content-center align-items-center">
-                        <SpinnerCircularFixed
-                          size={42}
-                          thickness={90}
-                          speed={160}
-                          color="rgb(3, 171, 238)"
-                          secondaryColor="white"
-                        />
-                      </div>
-                    ) : (
-                      <h1 className="text">Login In</h1>
-                    )}
-                  </button>
                 )}
+                <button type="submit" className="button align-self-center">
+                  {isLoading ? (
+                    <div className="d-flex justify-content-center align-items-center">
+                      <SpinnerCircularFixed
+                        size={42}
+                        thickness={90}
+                        speed={160}
+                        color="rgb(3, 171, 238)"
+                        secondaryColor="white"
+                      />
+                    </div>
+                  ) : (
+                    <h1 className="text">Login In</h1>
+                  )}
+                </button>
                 <p className="msg text-center mt-3">
                   Don't have an Account?
                   <Link className="login-btn" to="/signup">

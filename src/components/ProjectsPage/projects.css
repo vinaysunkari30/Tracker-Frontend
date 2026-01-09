@@ -132,7 +132,7 @@
 
 @media screen and (min-width: 768px){
     .no-projects-div{
-        width: 80%;
+        width: 100%;
     }
     .projects-heading{
         font-size: 42px;

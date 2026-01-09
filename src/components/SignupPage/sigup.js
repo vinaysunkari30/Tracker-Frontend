@@ -139,8 +139,9 @@ class SignupPage extends Component {
       },
       body: JSON.stringify(userDetails),
     };
+    // https://tracker-backend-vg3b.onrender.com
     const response = await fetch(
-      "https://tracker-backend-vg3b.onrender.com/signup",
+      "http://localhost:5000/signup",
       options
     );
     const jsonData = await response.json();
@@ -154,6 +155,7 @@ class SignupPage extends Component {
       this.setState({
         errorMsg: jsonData.error,
         isErr: true,
+        isLoading: false,
       });
     }
   };

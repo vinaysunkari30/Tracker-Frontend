@@ -44,7 +44,7 @@ class TasksPage extends Component {
       },
     };
     const response = await fetch(
-      `https://tracker-backend-vg3b.onrender.com/projects/${id}`,
+      `http://localhost:5000/projects/${id}`,
       options
     );
     const jsonData = await response.json();
@@ -133,10 +133,8 @@ class TasksPage extends Component {
       },
       body: JSON.stringify(taskDetails),
     };
-    const response = await fetch(
-      `https://tracker-backend-vg3b.onrender.com/projects/${id}/tasks`,
-      options
-    );
+    // https://tracker-backend-vg3b.onrender.com
+    const response = await fetch(`http://localhost:5000/projects/${id}/tasks`,options);
     const jsonData = await response.json();
     if (response.ok) {
       await this.getTasksList();
@@ -203,13 +201,9 @@ class TasksPage extends Component {
                   </div>
                 </div>
               ) : (
-                <div className="fiiled-projects-page">
-                  <div className="d-flex project-div mt-2 ps-md-5">
-                    <h1 className="tasks-heading mt-2 ms-md-4 ms-lg-5">
-                      Project Name{" "}
-                    </h1>
-                    <span className="colon">:</span>
-                    <span className="project-name">{projectName}</span>
+                <div className="filled-projects-page">
+                  <div className="d-flex justify-content-center align-items-center project-name-div w-100 ps-md-5">
+                    <h1 className="project-name">{projectName}</h1>
                   </div>
                   <div className="d-flex justify-content-end mt-3">
                     <button

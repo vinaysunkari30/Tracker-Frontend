@@ -6,15 +6,13 @@
     background-image: url('https://img.freepik.com/premium-photo/businessman-holding-pencil-complete-checklist-with-tick-marks-business-organization-achievements-goals-vector-concept_1029476-109496.jpg');
     background-size: cover;
     background-position: center;
-    /* border: 2px solid black; */
+    padding:20px 20px;
 }
-
 .sign-in-form {
     border-radius: 15px;
-    padding: 5px 30px 10px 30px;
-    height: 95vh;
-    width: 80%;
-    /* border: 2px solid white; */
+    padding: 10px;
+    height: 95%;
+    width: 90%;
     background-color: rgba(2, 90, 96, 0.411);
     backdrop-filter: blur(4px);
     box-shadow: 0px 0px 10px 2px rgb(7, 61, 61);
@@ -25,6 +23,7 @@
     font-weight: bold;
     color: rgb(255, 255, 255);
     letter-spacing: 1.5px;
+    margin-top: 10px;
 }
 .user-icon{
     color: white;
@@ -132,24 +131,25 @@
     text-decoration: none;
 }
 
-@media screen and (max-width: 576px) and(min-width: 768px){
+/* @media screen and (max-width: 576px) and(min-width: 768px){
     .sign-in-form{
         width: 100%;
         box-shadow: none;
     }
-}
+} */
 
 @media screen and (min-width: 768px){
     .sign-in-form{
-        width: 80%;
+        width: 100%;
         box-shadow: none;
-        height: 95vh;
+        height: 100%;
         background-color: rgba(4, 141, 151, 0.308);
     }
     .sign-in-container{
         height: 100vh;
         background-color: rgb(172, 214, 218);
         background-image: none;
+        padding: 20px;
     }
     .image{
         height: 550px; 
