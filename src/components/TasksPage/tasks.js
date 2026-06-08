@@ -168,7 +168,6 @@ class TasksPage extends Component {
       taskName,
       description,
       status,
-      isAllFilled,
     } = this.state;
     const { match } = this.props;
     const { params } = match;
