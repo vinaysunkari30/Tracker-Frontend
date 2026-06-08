@@ -1,0 +1,146 @@
+.task-div{
+    border-bottom-width: 2px;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    padding: 3px;
+    margin-bottom: 22px;
+    /* border: 2px solid white; */
+    width: 100%;
+}
+.task-div:hover{
+    background-color: rgb(5, 202, 216);
+    border-radius: 5px;
+    border-bottom-color: rgb(5, 202, 216);
+}
+.task-link{
+    text-decoration: none;
+    color: white;
+    padding-bottom: 0px;
+}
+.id{
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    /* border: 2px solid white; */
+    margin-bottom: 0px;
+    font-size: 20px;
+    padding: 5px;
+}
+.task-title{
+    font-family:'Roboto Slab';
+    font-weight: bold;
+    font-size: 17px;
+    padding-left: 40px;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+    /* border: 2px solid white; */
+    padding: 7px;
+}
+.status{
+    font-family:'Roboto Slab';
+    font-weight: bold;
+    font-size: 17px;
+    text-shadow: 0 0 5px #4bd4fa, 0 0 10px #0ddbfb, 0 0 10px #66e4f8, 0 0 10px #61b8cb;
+    animation: strongPulse 1.5s ease-in-out infinite;
+    /* border: 2px solid white; */
+}
+
+@keyframes strongPulse {
+    0%, 100% {
+      text-shadow:
+        0 0 5px #4bd4fa,
+        0 0 10px #0ddbfb,
+        0 0 10px #66e4f8,
+        0 0 10px #61b8cb;
+      transform: scale(1);
+    }
+    50% {
+      text-shadow:
+        0 0 15px #4bd4fa,
+        0 0 30px #0ddbfb,
+        0 0 35px #66e4f8,
+        0 0 40px #61b8cb;
+      transform: scale(1.03);
+    }
+  }
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+    .task-div{
+        padding: 0px;
+        width: 82%;
+        margin-bottom: 26px;
+    }
+    .id{
+        padding-left: 20px;
+        margin-bottom: 0px;
+        text-align: center;
+        font-size: 21px;
+    }
+    .task-title{
+        font-size: 18px;
+    }
+    .status{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .task-div{
+        padding: 0px;
+        width: 78%;
+        margin-bottom: 25px;
+    }
+    .id{
+        font-size: 19px;
+        padding-left: 20px;
+        margin-bottom: 0px;
+        text-align: center;
+    }
+    .task-title{
+        font-size: 19px;
+    }
+    .status{
+        font-size: 19px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    .task-div{
+        width: 75%;
+        margin-bottom: 18px;
+    }
+    .id{
+        padding-left: 20px;
+        margin-bottom: 0px;
+        text-align: center;
+        font-size: 21px;
+    }
+    .task-title{
+        font-size: 19px;
+        text-align: center;
+    }
+    .status{
+        font-size: 19px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .task-div{
+        width: 65%;
+        margin-bottom: 18px;
+    }
+    .id{
+        padding-left: 20px;
+        margin-bottom: 0px;
+        text-align: center;
+        font-size: 21px;
+    }
+    .task-title{
+        font-size: 20px;
+        text-align: center;
+    }
+    .status{
+        font-size: 20px;
+        text-align: center;
+    }
+}
